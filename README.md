@@ -15,22 +15,26 @@ into your node-style web-application.
 
 ## Usage
 
-To get started, create a [bpmn-js](https://github.com/bpmn-io/bpmn-js) instance
-and render [BPMN 2.0 diagrams](https://www.omg.org/spec/BPMN/2.0.2/) in the browser:
+To get started, render a [BPMN 2.0 diagram](https://www.omg.org/spec/BPMN/2.0.2/) in the browser:
 
 ```javascript
-const xml = '...'; // my BPMN 2.0 xml
-const viewer = new BpmnJS({
-  container: 'body'
-});
+<html>
+<head>
+  <title>hello-viewer</title>
+  <script src="https://unpkg.com/bpmn-js@8.2.0/dist/bpmn-viewer.development.js"></script>
+</head>
+<body>
+  <script>
+    let c = document.createElement('div');
+    document.body.appendChild(c);
 
-try {
-  const { warnings } = await viewer.importXML(xml);
+    let viewer = new BpmnJS({ container: c });
 
-  console.log('rendered');
-} catch (err) {
-  console.log('error rendering', err);
-}
+    fetch('https://cdn.staticaly.com/gh/bpmn-io/bpmn-js-examples/dfceecba/starter/diagram.bpmn')
+            .then(response => response.text())
+            .then(xml => viewer.importXML(xml));
+    </script>
+</html>
 ```
 
 Checkout our [examples](https://github.com/bpmn-io/bpmn-js-examples) for many
