@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>hello-viewer</title>
+    <script src="dist/bpmn-viewer.production.min.js"></script>
+</head>
+<body>
+<script>
+  let c = document.createElement('div');
+  document.body.appendChild(c);
+
+  let viewer = new BpmnJS({ container: c });
+
+  fetch('resources/diagram.bpmn')
+    .then(response => response.text())
+    .then(xml => viewer.importXML(xml));
+</script>
+</html>

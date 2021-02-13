@@ -15,7 +15,7 @@ into your node-style web-application.
 
 ## Usage
 
-To get started, render a [BPMN 2.0 diagram](https://www.omg.org/spec/BPMN/2.0.2/) in the browser:
+To get started copy the code below to a local file (e.g. hello-viewer.html):
 
 ```javascript
 <html>
@@ -37,8 +37,11 @@ To get started, render a [BPMN 2.0 diagram](https://www.omg.org/spec/BPMN/2.0.2/
 </html>
 ```
 
-Checkout our [examples](https://github.com/bpmn-io/bpmn-js-examples) for many
-more supported usage scenarios.
+Now load the file using a browser (Chrome, Firefox, etc.) and you will see a BPMN diagram:
+
+![1611957113924](.md/README/1611957113924.png)
+
+
 
 
 ### Dynamic Attach/Detach
@@ -61,6 +64,8 @@ viewer.detach();
 * [Demo](http://demo.bpmn.io)
 * [Issues](https://github.com/bpmn-io/bpmn-js/issues)
 * [Examples](https://github.com/bpmn-io/bpmn-js-examples)
+  * Checkout our [examples](https://github.com/bpmn-io/bpmn-js-examples) for many
+    more supported usage scenarios.
 * [Forum](https://forum.bpmn.io)
 * [Changelog](./CHANGELOG.md)
 
